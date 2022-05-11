@@ -49,7 +49,7 @@ module.exports = generators.Base.extend({
                 name: 'bannerType',
                 message: 'What type of banner is it?',
                 choices: ['DoubleClick', 'Sizmek', 'Flashtalking', 'FlashtalkingStandard', 'DCM', 'None'],
-                default: 'DoubleClick'
+                default: 'DCM'
             },
             {
                 type: 'input',

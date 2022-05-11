@@ -12,15 +12,13 @@ app.Animation = (function () {
 		// DO NOT EDIT: reveals banner once loaded
 		t.set(banner, {opacity:1});
 
-		t.set("#title", {scale:0});
-		t.set("#caption", {scale:0});
+		
 	}
 
 	// --------------------------------------------------------------------------------------
 	// Starts the animation
 	function start() {
-		t.to("#title", 1, {scale:1, ease:Cubic.easeInOut});
-		t.to("#caption", 1, {scale:1, ease:Cubic.easeInOut});
+		
 	}
 
 	// --------------------------------------------------------------------------------------

@@ -10,6 +10,16 @@ body {
 	left: 0;
 }
 
+#border {
+    display: block;
+    width: $banner-width;
+    height: $banner-height;
+    pointer-events: none;
+    outline: solid 1px #ccc;
+    outline-offset: -1px;
+    z-index: 999;
+}
+
 #banner {
 	background: #111;
     overflow: hidden;
@@ -23,26 +33,5 @@ body {
         height: 100%;
         width: 100%;
     }
-
-    #border {
-		display: block;
-		width: $banner-width;
-		height: $banner-height;
-        pointer-events: none;
-		outline: solid 1px #ccc;
-  		outline-offset: -1px;
-		z-index: 999;
-    }
-
-    #title {
-        font-size: 40px;
-        line-height: 1;
-        letter-spacing: -1px;
-        color: #ff0000;
-        text-align: center;
-    }
-
-    #caption {
-        text-align: center;
-    }
+   
 }

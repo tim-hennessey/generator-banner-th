@@ -8,11 +8,20 @@ var app = app || {};
 
 	function handleReady(e) {
 		console.log("READY: " + e);
-		// app.Animation.start();
 	}
 
-	window.addEventListener("load", function() {
-		app.Animation.start();
+	document.addEventListener("DOMContentLoaded", function(event) {
+	  
+	    window.onload = function() {
+	      
+	       window.requestAnimationFrame(function() {
+	      
+	          app.Animation.start();  
+	         
+	       });
+	      
+	    };
+	  
 	});
 
 })();

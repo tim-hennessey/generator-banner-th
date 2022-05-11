@@ -5,6 +5,7 @@
     <title><%= appname %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ad.size" content="<%= dimensions %>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -12,16 +13,20 @@
     <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %><% if (bannerType === 'DCM') { %><script>var clickTag=""</script><% } %>
 </head>
 <body>
+    <div id="border" class="default"></div>
     <div id="banner" class="default">
-        <h1 id="title">Freakin Banners!</h1>
-        <p id="caption">Get some</p>
-        <div id="border" class="default"></div>
         <div id="button-exit" class="default"></div>
     </div>
-
     <% if (includeZepto == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script><% } %>
+    <% if (bannerType === 'Flashtalking' || bannerType === 'FlashtalkingStandard' || bannerType === 'None') { %><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script><% } %>
 
-    <% if (bannerType === 'Flashtalking' || bannerType === 'FlashtalkingStandard' || bannerType === 'None') { %><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_19_0/TweenMax.min.js"></script><% } %><% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
+    <% if (bannerType === 'DCM' || bannerType === 'DoubleClick') { %>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> --><% } %>
+
+    <% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_19_0/TweenMax.min.js"></script><% } %>
+    <% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
 
     <!-- build:js scripts/main.js -->
     <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="scripts/TrackingSizmek.js"></script><% } %><% if (bannerType === 'Flashtalking') { %><script src="scripts/TrackingFlashtalking.js"></script><% } %><% if (bannerType === 'FlashtalkingStandard') { %><script src="scripts/TrackingFlashtalkingStandard.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
