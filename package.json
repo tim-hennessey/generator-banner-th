@@ -1,13 +1,13 @@
 {
-    "name": "generator-banner",
+    "name": "generator-banner-th",
     "version": "1.9.7",
     "description": "Scaffold out an HTML5 banner",
     "license": "MIT",
-    "repository": "midnightprojects/generator-banner",
+    "repository": "tim-hennessey/generator-banner-th",
     "author": {
-        "name": "Tri Nguyen",
-        "email": "tri@midnightprojects.com",
-        "url": "https://github.com/midnightprojects"
+        "name": "Tim Hennessey",
+        "email": "tim.hennessey@deutschinc.com",
+        "url": "https://github.com/tim-hennessey"
     },
     "main": "app/index.js",
     "scripts": {
