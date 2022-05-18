@@ -10,9 +10,7 @@
         "url": "https://github.com/tim-hennessey"
     },
     "main": "app/index.js",
-    // "publishConfig":{
-    //     "registry": "https://npm.pkg.github.com/@tim-hennessey"
-    // },
+    
     "scripts": {
         "test": "mocha --reporter spec"
     },
