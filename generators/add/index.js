@@ -48,6 +48,13 @@ module.exports = yeoman.generators.Base.extend({
                 );
             }
 
+            if (this.bannerType === "Google Ads") {
+                this.fs.copy(
+                    this.templatePath('TrackingDCM.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingDCM.js')
+                );
+            }
+
             if (this.bannerType === "None") {
                 this.fs.copy(
                     this.templatePath('TrackingNone.js'),

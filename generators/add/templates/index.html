@@ -10,7 +10,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'Google Ads (formerly Google AdWords)') { %><script>var clickTag=""</script><% } %>
+    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'Google Ads') { %><script>var clickTag=""</script><% } %>
 </head>
 <body>
     <div id="border" class="default"></div>
@@ -19,10 +19,9 @@
         <div id="button-exit" class="default"></div>
     </div>
     <% if (includeLottie == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'DoubleClick' || bannerType === 'None') { %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script><% } %><% if (bannerType === 'Google Ads (formerly Google AdWords') { %>
-    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %>
     <!-- build:js scripts/main.js -->
-    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'Google Ads (formerly Google AdWords)') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
+    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
     <script src="scripts/Animation.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

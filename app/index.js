@@ -48,7 +48,7 @@ module.exports = generators.Base.extend({
                 type: 'list',
                 name: 'bannerType',
                 message: 'What type of banner is it?',
-                choices: ['DoubleClick', 'DCM', "Google Ads (formerly Google AdWords)", 'None'],
+                choices: ['DoubleClick', 'DCM', "Google Ads", 'None'],
                 default: 'DCM'
             },
             {
