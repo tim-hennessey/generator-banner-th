@@ -100,6 +100,11 @@ module.exports = yeoman.generators.Base.extend({
             );
 
             this.fs.copy(
+                this.templatePath('lottie/Animation.js'),
+                this.destinationPath("app/" + this.bannerSize + '/scripts/lottie/Animation.js')
+            );
+
+            this.fs.copy(
                 this.templatePath('gsap_extras'),
                 this.destinationPath("app/" + this.bannerSize + '/scripts/gsap_extras')
             );
