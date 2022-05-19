@@ -15,7 +15,7 @@ module.exports = yeoman.generators.Base.extend({
         });
 
         this.bannerType = this.config.get('bannerType');
-        this.includeZepto = this.config.get('includeZepto');
+        this.includeLottie = this.config.get('includeLottie');
         this.bannerSize = this.name;
     },
 
@@ -164,7 +164,7 @@ module.exports = yeoman.generators.Base.extend({
                 {
                     appname: this.appname,
                     bannerType: this.bannerType,
-                    includeZepto: this.includeZepto,
+                    includeLottie: this.includeLottie,
                     dimensions: "width=" + this.bannerSize.split("x")[0] + ",height=" + this.bannerSize.split("x")[1]
                 }
             );
