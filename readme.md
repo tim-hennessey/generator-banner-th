@@ -13,7 +13,7 @@
 
 ## Getting Started
 
-- Install `npm install -g generator-banner`
+- Install `npm install -g generator-banner-th`
 - Create a new project folder and cd into it
 - Run `yo banner` and follow the instructions
 - For additional sizes, run `yo banner:add WIDTHxHEIGHT`

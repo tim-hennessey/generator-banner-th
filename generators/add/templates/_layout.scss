@@ -27,6 +27,12 @@ body {
     height: $banner-height;
     opacity: 0;
 
+    #animationWindow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
     #button-exit {
         background-color: rgba(255, 255, 255, 0);
         cursor: pointer;

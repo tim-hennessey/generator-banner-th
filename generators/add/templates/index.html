@@ -10,27 +10,36 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script><% } %><% if (bannerType === 'DCM') { %><script>var clickTag=""</script><% } %>
+    <% if (bannerType === 'DoubleClick') { %><script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script><% } %>
+    <% if (bannerType === 'DCM' || bannerType === 'Google Ads (formerly Google AdWords)') { %><script>var clickTag=""</script><% } %>
+    <!-- <% if (bannerType === 'Google Ads (formerly Google AdWords)') { %><script>var clickTag=""</script><% } %> -->
 </head>
 <body>
     <div id="border" class="default"></div>
     <div id="banner" class="default">
+        <% if (includeLottie == true) { %><div id="animationWindow"></div><% } %>
         <div id="button-exit" class="default"></div>
     </div>
-    <% if (includeZepto == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script><% } %>
-    <% if (bannerType === 'Flashtalking' || bannerType === 'FlashtalkingStandard' || bannerType === 'None') { %><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script><% } %>
 
-    <% if (bannerType === 'DCM' || bannerType === 'DoubleClick') { %>
-    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> --><% } %>
+    <% if (includeLottie == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script><% } %>
 
-    <% if (bannerType === 'Sizmek') { %><script src="https://secure-ds.serving-sys.com/BurstingcachedScripts/libraries/greensock/1_19_0/TweenMax.min.js"></script><% } %>
-    <% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
+    <% if (bannerType === 'DCM' || bannerType === 'DoubleClick' || bannerType === 'None') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script><% } %>
+
+    <% if (bannerType === 'Google Ads (formerly Google AdWords') { %>
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %>
+
 
     <!-- build:js scripts/main.js -->
-    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'Sizmek') { %><script src="scripts/TrackingSizmek.js"></script><% } %><% if (bannerType === 'Flashtalking') { %><script src="scripts/TrackingFlashtalking.js"></script><% } %><% if (bannerType === 'FlashtalkingStandard') { %><script src="scripts/TrackingFlashtalkingStandard.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
-    <script src="scripts/Animation.js"></script>
+    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %>
+    <% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %>
+    <% if (bannerType === 'Google Ads (formerly Google AdWords)') { %><script src="scripts/TrackingDCM.js"></script><% } %>
+    <% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
+
+    <% if (includeLottie == true) { %><script src="scripts/lottie/Animation.js"></script><% } %>
+    <% if (includeLottie == false) { %><script src="scripts/Animation.js"></script><% } %>
+    
+    <!-- <script src="scripts/Animation.js"></script> -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

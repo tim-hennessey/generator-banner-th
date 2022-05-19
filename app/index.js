@@ -48,7 +48,7 @@ module.exports = generators.Base.extend({
                 type: 'list',
                 name: 'bannerType',
                 message: 'What type of banner is it?',
-                choices: ['DoubleClick', 'Sizmek', 'Flashtalking', 'FlashtalkingStandard', 'DCM', 'None'],
+                choices: ['DoubleClick', 'DCM', "Google Ads (formerly Google AdWords)", 'None'],
                 default: 'DCM'
             },
             {
@@ -59,8 +59,8 @@ module.exports = generators.Base.extend({
             },
             {
                 type: 'confirm',
-                name: 'includeZepto',
-                message: 'Include Zepto?',
+                name: 'includeLottie',
+                message: 'Include Lottie?',
                 default: false
             },
         ];
@@ -74,7 +74,7 @@ module.exports = generators.Base.extend({
     // ---------------------------------------------------------------------------
     config: function() {
         this.config.set('bannerType', this.props.bannerType);
-        this.config.set('includeZepto', this.props.includeZepto);
+        this.config.set('includeLottie', this.props.includeLottie);
     },
 
     // ---------------------------------------------------------------------------
