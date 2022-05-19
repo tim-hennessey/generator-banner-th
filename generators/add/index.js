@@ -41,45 +41,6 @@ module.exports = yeoman.generators.Base.extend({
                 );
             }
 
-            if (this.bannerType === "Sizmek") {
-                this.fs.copy(
-                    this.templatePath('TrackingSizmek.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingSizmek.js')
-                );
-            }
-
-            if (this.bannerType === "Flashtalking") {
-                this.fs.copy(
-                    this.templatePath('TrackingFlashtalking.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingFlashtalking.js')
-                );
-
-                this.fs.copyTpl(
-                    this.templatePath('manifest.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/manifest.js'),
-                    {
-                        bannerWidth: parseInt(this.bannerSize.split("x")[0]),
-                        bannerHeight: parseInt(this.bannerSize.split("x")[1])
-                    }
-                );
-            }
-
-			if (this.bannerType === "FlashtalkingStandard") {
-                this.fs.copy(
-                    this.templatePath('TrackingFlashtalkingStandard.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingFlashtalkingStandard.js')
-                );
-
-                this.fs.copyTpl(
-                    this.templatePath('manifest.js'),
-                    this.destinationPath("app/" + this.bannerSize + '/manifest.js'),
-                    {
-                        bannerWidth: parseInt(this.bannerSize.split("x")[0]),
-                        bannerHeight: parseInt(this.bannerSize.split("x")[1])
-                    }
-                );
-            }
-
             if (this.bannerType === "DCM") {
                 this.fs.copy(
                     this.templatePath('TrackingDCM.js'),
@@ -94,15 +55,19 @@ module.exports = yeoman.generators.Base.extend({
                 );
             }
 
-            this.fs.copy(
-                this.templatePath('Animation.js'),
-                this.destinationPath("app/" + this.bannerSize + '/scripts/Animation.js')
-            );
+            if (this.includeLottie === true) {
+                this.fs.copy(
+                    this.templatePath('lottie/Animation.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/Animation.js')
+                );
+            }
 
-            this.fs.copy(
-                this.templatePath('lottie/Animation.js'),
-                this.destinationPath("app/" + this.bannerSize + '/scripts/lottie/Animation.js')
-            );
+            if (this.includeLottie === false) {
+                this.fs.copy(
+                    this.templatePath('Animation.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/Animation.js')
+                );
+            }
 
             this.fs.copy(
                 this.templatePath('gsap_extras'),
