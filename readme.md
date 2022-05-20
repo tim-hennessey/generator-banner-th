@@ -16,7 +16,7 @@
 - Install `npm install -g generator-banner-th`
 - Create a new project folder and cd into it
 - Run `yo banner` and follow the instructions
-- For additional sizes, run `yo banner:add WIDTHxHEIGHT`
+- For additional sizes, run `yo banner-th:add WIDTHxHEIGHT`
 - Run `grunt serve --target=WIDTHxHEIGHT` for preview and live reload
 - Run `grunt build --target=WIDTHxHEIGHT` for a production ready build
 
