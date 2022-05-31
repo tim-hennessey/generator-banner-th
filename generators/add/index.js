@@ -55,6 +55,13 @@ module.exports = yeoman.generators.Base.extend({
                 );
             }
 
+            if (this.bannerType === "Flashtalking") {
+                this.fs.copy(
+                    this.templatePath('TrackingFlashtalking.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingFlashtalking.js')
+                );
+            }
+
             if (this.bannerType === "None") {
                 this.fs.copy(
                     this.templatePath('TrackingNone.js'),

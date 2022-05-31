@@ -20,11 +20,11 @@
         <div id="button-exit" class="default"></div>
     </div>
 
-    <% if (includeLottie == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'DoubleClick' || bannerType === 'None') { %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %>
+    <% if (includeLottie == true) { %><script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.1/lottie.min.js"></script><% } %><% if (bannerType === 'DCM' || bannerType === 'DoubleClick' || bannerType === 'Flashtalking' || bannerType === 'None') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script><% } %><% if (bannerType === 'Flashtalking') { %><script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script><% } %>
     
     <!-- build:js scripts/main.js -->
-    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
+    <% if (bannerType === 'DoubleClick') { %><script src="scripts/TrackingDoubleClick.js"></script><% } %><% if (bannerType === 'DCM') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'Google Ads') { %><script src="scripts/TrackingDCM.js"></script><% } %><% if (bannerType === 'Flashtalking') { %><script src="scripts/TrackingFlashtalking.js"></script><% } %><% if (bannerType === 'None') { %><script src="scripts/TrackingNone.js"></script><% } %>
     <script src="scripts/Animation.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
