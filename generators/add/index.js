@@ -60,6 +60,15 @@ module.exports = yeoman.generators.Base.extend({
                     this.templatePath('TrackingFlashtalking.js'),
                     this.destinationPath("app/" + this.bannerSize + '/scripts/TrackingFlashtalking.js')
                 );
+
+                this.fs.copyTpl(
+                    this.templatePath('manifest.js'),
+                    this.destinationPath("app/" + this.bannerSize + '/manifest.js'),
+                    {
+                        bannerWidth: parseInt(this.bannerSize.split("x")[0]),
+                        bannerHeight: parseInt(this.bannerSize.split("x")[1])
+                    }
+                );
             }
 
             if (this.bannerType === "None") {
